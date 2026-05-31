@@ -54,11 +54,11 @@ const projects = [
       <div>
         <h3>{project.name}</h3>
         <p class="description">{project.description}</p>
-        <div class="list-container">
+        <ul class="list-container">
           {project.tags.map((tag) => (
-            <Tag label={tag} />
+            <li><Tag label={tag} /></li>
           ))}
-        </div>
+        </ul>
         <hr />
       </div>
     ))
@@ -68,10 +68,13 @@ const projects = [
 </BaseLayout>
 
 <style>
-  .list-container {
+  ul.list-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    column-gap: 8px;
+    row-gap: 16px;
+    padding: 0;
+    list-style: none;
   }
   .description {
     text-wrap: balance;

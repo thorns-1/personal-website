@@ -78,11 +78,11 @@ const technologies = {
       Object.entries(technologies).map(([_, technology]) => (
         <div>
           <h3>{technology.name}</h3>
-          <div class="list-container">
+          <ul class="list-container">
             {technology.list.map((item) => (
-              <Tag label={item} />
+              <li><Tag label={item} /></li>
             ))}
-          </div>
+          </ul>
         </div>
       ))
     }
@@ -101,9 +101,12 @@ const technologies = {
     margin-bottom: 16px;
   }
 
-  .list-container {
+  ul.list-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    column-gap: 8px;
+    row-gap: 16px;
+    padding: 0;
+    list-style: none;
   }
 </style>
