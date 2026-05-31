@@ -48,23 +48,29 @@ const projects = [
 ---
 
 <BaseLayout pageTitle="My Projects">
-  <h1>My Commercial Projects</h1>
-  {
-    projects.map((project) => (
-      <div>
-        <h3>{project.name}</h3>
-        <p class="description">{project.description}</p>
-        <ul class="list-container">
-          {project.tags.map((tag) => (
-            <li><Tag label={tag} /></li>
-          ))}
-        </ul>
-        <hr />
-      </div>
-    ))
-  }
-  <h1>My Pet Projects</h1>
-  <div>🚧🛠️🔨UNDER CONSTRUCTION🔨🛠️🚧</div>
+  <section>
+    <h1>My Commercial Projects</h1>
+    {
+      projects.map((project) => (
+        <article>
+          <h3>{project.name}</h3>
+          <p class="description">{project.description}</p>
+          <ul class="list-container">
+            {project.tags.map((tag) => (
+              <li>
+                <Tag label={tag} />
+              </li>
+            ))}
+          </ul>
+          <hr />
+        </article>
+      ))
+    }
+  </section>
+  <section>
+    <h1>My Pet Projects</h1>
+    <p>🚧🛠️🔨UNDER CONSTRUCTION🔨🛠️🚧</p>
+  </section>
 </BaseLayout>
 
 <style>
@@ -80,6 +86,6 @@ const projects = [
     text-wrap: balance;
   }
   hr {
-    opacity: .5;
+    opacity: 0.5;
   }
 </style>
