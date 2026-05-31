@@ -2,13 +2,14 @@
 const { label } = Astro.props;
 ---
 
-<div class="tag">{label}</div>
+<b class="tag">{label}</b>
 
 <style>
-  .tag {
+  b.tag {
     border: 1px solid #2c2c2d;
     border-radius: 8px;
     box-sizing: border-box;
+    font-weight: 500;
     color: var(--tag);
     padding: 4px 8px;
     line-height: 18px;
