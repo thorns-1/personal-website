@@ -20,7 +20,7 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <nav>
-      <section>
+      <div>
         <a href="/" class="navigation-title">Ivan's personal website</a>
         <input id="menu-toggle" type="checkbox" />
         <BurgerMenuIcon />
@@ -28,14 +28,14 @@ const { pageTitle } = Astro.props;
           <li><a href="/about">About me</a></li>
           <li><a href="/projects">Projects</a></li>
         </ul>
-      </section>
+      </div>
     </nav>
     <main>
       <div class="content">
         <slot />
       </div>
     </main>
-    <footer><section>© 2026 Ivan · Powered by <a href="https://astro.build">Astro</a>.</section></footer>
+    <footer><div>© 2026 Ivan · Powered by <a href="https://astro.build">Astro</a>.</div></footer>
   </body>
 </html>
 <style is:global>
@@ -47,7 +47,7 @@ const { pageTitle } = Astro.props;
     justify-content: center;
   }
 
-  nav section {
+  nav div {
     display: block;
     width: 100%;
     max-width: var(--content-width);
